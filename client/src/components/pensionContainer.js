@@ -17,7 +17,6 @@ function PensionContainer({
   setPensionData,
   setEmployment,
 }) {
-  console.log(employemnt);
   return (
     <div id='pensioncontainer'>
       <FormContainer

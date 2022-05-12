@@ -64,7 +64,7 @@ export default function PensionChart({ pensionData, employemnt }) {
   }, [employemnt]);
 
   return (
-    <div style={{ height: "75vh", width: "33%", border: "2px solid orange" }}>
+    <div style={{ height: "75vh", width: "33%" }}>
       <Card style={{ width: "100%", height: "33%" }}>
         <Card.Body>
           <Card.Title>Pension</Card.Title>

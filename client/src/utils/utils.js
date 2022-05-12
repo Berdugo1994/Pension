@@ -6,11 +6,9 @@ async function fetchPensionValues(date, salary, empr_sev, empr_gem, empe_gem) {
       `/api/since?date=${date}&salary=${salary}&empr_sev=${empr_sev}&empr_gem=${empr_gem}&empe_gem=${empe_gem}`
     );
     const data = await response.json();
-    console.log(data);
     if (response.status === 200) {
       return data;
     } else {
-      console.log(response.status);
     }
   } catch (err) {
     console.log(err);

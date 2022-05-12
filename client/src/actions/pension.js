@@ -7,6 +7,5 @@ export const clearPensionData = () => (dispatch) => {
   dispatch({ type: REMOVE_PENSION_DATA });
 };
 export const setEmployment = (payload) => (dispatch) => {
-  console.log(payload);
   dispatch({ type: SET_EMPLOYMENT, payload });
 };
