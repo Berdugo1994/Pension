@@ -3,8 +3,9 @@ import { Form, Row, Col, Button, InputGroup } from "react-bootstrap";
 import "../css/form_container.css";
 import DatePicker from "react-date-picker";
 import { fetchPensionValues } from "../utils/utils";
+import ToolTip from "./toolTip";
 
-function FormContainer({ setPensionData, setEmploymentAction }) {
+function CustomForm({ setPensionData, setEmploymentAction }) {
   const [salary, setSalary] = useState();
   const [employerSev, setEmployerSev] = useState(0);
   const [employerGem, setEmployerGem] = useState(0);
@@ -105,15 +106,21 @@ function FormContainer({ setPensionData, setEmploymentAction }) {
           </InputGroup>
         </Form.Group>
         <Form.Group as={Col} controlId='formGridDateSend'>
-          <Form.Label>Since</Form.Label>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Form.Label>Since</Form.Label>
+            <ToolTip
+              context={
+                "This page visualize<br/> 'HOW MUCH MONEY COULD I HAVE NOW, IF I WAS SET ASIDE PENSION SINCE DATE = X<br/> (Assuming your pension bag is 100% dow jones stock shares)"
+              }
+            />
+          </div>
           <div>
             <DatePicker
-              calendarAriaLabel={"Since"}
               onChange={setDate}
               value={date}
               defaultView={"year"}
               maxDate={new Date()}
-              minDate={new Date(1972)}
+              minDate={new Date(1972, 0, 1)}
               maxDetail={"year"}
             />
           </div>
@@ -128,4 +135,4 @@ function FormContainer({ setPensionData, setEmploymentAction }) {
   );
 }
 
-export default FormContainer;
+export default CustomForm;

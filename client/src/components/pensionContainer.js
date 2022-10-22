@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 
 //css
 import "../css/pension_container.css";
-import FormContainer from "./formContainer";
-import PensionGraph from "./pensionGraph";
+import PensionForm from "./pensionForm";
+import Graph from "./graph";
 
 //Actions
 import { setEmployment, setPensionData } from "../actions/pension";
@@ -19,13 +19,13 @@ function PensionContainer({
 }) {
   return (
     <div id='pensioncontainer'>
-      <FormContainer
+      <PensionForm
         setPensionData={setPensionData}
         setEmploymentAction={setEmployment}
       />
       {pensionData.length > 0 && (
         <div id='pension_graphs'>
-          <PensionGraph pensionData={pensionData} />
+          <Graph pensionData={pensionData} />
           <PensionChart pensionData={pensionData} employemnt={employemnt} />
         </div>
       )}

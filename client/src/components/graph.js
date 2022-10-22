@@ -12,12 +12,12 @@ import {
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-export default function PensionGraph({ pensionData }) {
+export default function Graph({ data }) {
   return (
     <div style={{ height: "75vh", width: "100%" }}>
       <ResponsiveContainer height={"100%"} width={"100%"}>
         <LineChart
-          data={pensionData}
+          data={data}
           margin={{
             top: 5,
             right: 30,
