@@ -1,0 +1,9 @@
+#modal-header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+#modal-header-products-button{
+    margin-right: 2%;
+}
