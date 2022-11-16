@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Provider } from "react-redux";
 import store from "./store";
 import PensionContainer from "./components/pensionContainer";
-import CustomContainer from "./components/customContainer";
+import SplitContainer from "./components/splitContainer";
 import "bootstrap/dist/css/bootstrap.css";
 import TopBar from "./components/topBar";
 import { Routes, Route } from "react-router-dom";
@@ -22,8 +22,8 @@ function App() {
           style={{ minHeight: "100%" }}
         />
         <Route
-          path='/custom'
-          element={<CustomContainer />}
+          path='/split'
+          element={<SplitContainer />}
           style={{ minHeight: "100%" }}
         />
       </Routes>

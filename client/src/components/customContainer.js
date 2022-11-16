@@ -10,7 +10,7 @@ import { setCustomData, customData } from "../actions/custom";
 
 function CustomContainer({ customData }) {
   return (
-    <div id='pensioncontainer'>
+    <div id='split'>
       <CustomForm setCustomData={setCustomData} />
       {customData.length > 0 && (
         <div>
