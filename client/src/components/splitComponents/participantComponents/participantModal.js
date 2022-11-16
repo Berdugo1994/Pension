@@ -69,7 +69,7 @@ export function ParticipantModal() {
             </div>
           </div>
         </Modal.Header>
-        <Modal.Body>{products ? <div>a</div> : <div>b</div>}</Modal.Body>
+        <Modal.Body>{products ? <div>a</div>: <ParticipantDetails/>}</Modal.Body>
         <Modal.Footer>
           <Button variant='secondary' onClick={handleClose}>
             Close
