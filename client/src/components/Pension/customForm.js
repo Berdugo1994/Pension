@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Button, InputGroup } from "react-bootstrap";
-import "../css/form_container.css";
+import "../../css/Pension/form_container.css";
 import DatePicker from "react-date-picker";
-import { fetchPensionValues } from "../utils/utils";
+import { fetchPensionValues } from "./utils/utils";
 import ToolTip from "./toolTip";
 
 function CustomForm({ setPensionData, setEmploymentAction }) {
@@ -34,12 +34,12 @@ function CustomForm({ setPensionData, setEmploymentAction }) {
   }
 
   return (
-    <Form id='form_container' onSubmit={formHandler}>
-      <Row className='mb-3'>
-        <Form.Group as={Col} controlId='formGridSelect'>
+    <Form id="form_container" onSubmit={formHandler}>
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridSelect">
           <Form.Label>Employment</Form.Label>
           <Form.Select
-            aria-label='Default select example'
+            aria-label="Default select example"
             onChange={(e) => {
               setEmployment(e.target.value);
               setEmploymentAction(e.target.value);
@@ -47,29 +47,29 @@ function CustomForm({ setPensionData, setEmploymentAction }) {
               setEmployerSev(0);
             }}
           >
-            <option value='1'>employee</option>
-            <option value='2'>Independent</option>
+            <option value="1">employee</option>
+            <option value="2">Independent</option>
           </Form.Select>
         </Form.Group>
-        <Form.Group as={Col} controlId='formGridSalary'>
+        <Form.Group as={Col} controlId="formGridSalary">
           <Form.Label>Salary</Form.Label>
           <Form.Control
-            type='number'
-            placeholder='Total Salary'
+            type="number"
+            placeholder="Total Salary"
             onChange={(event) => {
               setSalary(parseInt(event.target.value));
             }}
           />
         </Form.Group>
-        <Form.Group as={Col} controlId='formGridEmployer'>
+        <Form.Group as={Col} controlId="formGridEmployer">
           <Form.Label>Employer</Form.Label>
           <InputGroup>
             <Form.Control
               disabled={employment == "2"}
               value={employerSev}
-              type='number'
-              step='0.01'
-              placeholder='Severance'
+              type="number"
+              step="0.01"
+              placeholder="Severance"
               onChange={(event) => {
                 setEmployerSev(parseFloat(event.target.value));
               }}
@@ -80,9 +80,9 @@ function CustomForm({ setPensionData, setEmploymentAction }) {
             <Form.Control
               disabled={employment == "2"}
               value={employerGem}
-              type='number'
-              step='0.01'
-              placeholder='Gemel'
+              type="number"
+              step="0.01"
+              placeholder="Gemel"
               onChange={(event) => {
                 setEmployerGem(parseFloat(event.target.value));
               }}
@@ -90,14 +90,14 @@ function CustomForm({ setPensionData, setEmploymentAction }) {
             <InputGroup.Text>%</InputGroup.Text>
           </InputGroup>
         </Form.Group>
-        <Form.Group as={Col} controlId='formGridEmployee'>
+        <Form.Group as={Col} controlId="formGridEmployee">
           <Form.Label>Employee</Form.Label>
           <InputGroup>
             <Form.Control
               value={employeeGem}
-              type='number'
-              step='0.01'
-              placeholder='Gemel'
+              type="number"
+              step="0.01"
+              placeholder="Gemel"
               onChange={(event) => {
                 setEmployeeGem(parseFloat(event.target.value));
               }}
@@ -105,7 +105,7 @@ function CustomForm({ setPensionData, setEmploymentAction }) {
             <InputGroup.Text>%</InputGroup.Text>
           </InputGroup>
         </Form.Group>
-        <Form.Group as={Col} controlId='formGridDateSend'>
+        <Form.Group as={Col} controlId="formGridDateSend">
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <Form.Label>Since</Form.Label>
             <ToolTip
@@ -124,8 +124,8 @@ function CustomForm({ setPensionData, setEmploymentAction }) {
               maxDetail={"year"}
             />
           </div>
-          <div className='d-grid gap-2' style={{ marginTop: "2px" }}>
-            <Button variant='primary' type='submit'>
+          <div className="d-grid gap-2" style={{ marginTop: "2px" }}>
+            <Button variant="primary" type="submit">
               Submit
             </Button>
           </div>

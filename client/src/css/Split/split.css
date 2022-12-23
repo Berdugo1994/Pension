@@ -1,0 +1,7 @@
+#split {
+  width: 100%;
+  border: 2px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

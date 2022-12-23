@@ -1,8 +1,13 @@
 #modal-header-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
+    text-align: center;
     width: 100%;
+}
+
+#modal-header-info{
+    text-decoration:unset;
 }
 #modal-header-products-button{
     margin-right: 2%;

@@ -6,11 +6,11 @@ import CustomForm from "./customForm";
 import Graph from "./graph";
 
 //Actions
-import { setCustomData, customData } from "../actions/custom";
+import { setCustomData, customData } from "../../actions/custom";
 
 function CustomContainer({ customData }) {
   return (
-    <div id='split'>
+    <div id="split">
       <CustomForm setCustomData={setCustomData} />
       {customData.length > 0 && (
         <div>
