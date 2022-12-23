@@ -1,4 +1,4 @@
-import { sendPensionMock } from "../__test__/mock/utils";
+import { sendPensionMock } from "../../../__test__/mock/utils";
 
 async function fetchPensionValues(date, salary, empr_sev, empr_gem, empe_gem) {
   try {

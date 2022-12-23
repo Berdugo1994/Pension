@@ -3,12 +3,12 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 //css
-import "../css/pension_container.css";
+import "../../css/Pension/pension_container.css";
 import PensionForm from "./pensionForm";
 import Graph from "./graph";
 
 //Actions
-import { setEmployment, setPensionData } from "../actions/pension";
+import { setEmployment, setPensionData } from "../../actions/pension";
 import PensionChart from "./pensionChart";
 
 function PensionContainer({
@@ -18,13 +18,13 @@ function PensionContainer({
   setEmployment,
 }) {
   return (
-    <div id='pensioncontainer'>
+    <div id="pensioncontainer">
       <PensionForm
         setPensionData={setPensionData}
         setEmploymentAction={setEmployment}
       />
       {pensionData.length > 0 && (
-        <div id='pension_graphs'>
+        <div id="pension_graphs">
           <Graph pensionData={pensionData} />
           <PensionChart pensionData={pensionData} employemnt={employemnt} />
         </div>

@@ -2,10 +2,10 @@
 import React, { useEffect } from "react";
 import { Provider } from "react-redux";
 import store from "./store";
-import PensionContainer from "./components/pensionContainer";
-import SplitContainer from "./components/splitContainer";
+import PensionContainer from "./components/Pension/pensionContainer";
+import Split from "./components/Split/split";
 import "bootstrap/dist/css/bootstrap.css";
-import TopBar from "./components/topBar";
+import TopBar from "./components/Pension/topBar";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,13 +17,13 @@ function App() {
       <TopBar />
       <Routes>
         <Route
-          path='/'
+          path="/"
           element={<PensionContainer />}
           style={{ minHeight: "100%" }}
         />
         <Route
-          path='/split'
-          element={<SplitContainer />}
+          path="/split"
+          element={<Split />}
           style={{ minHeight: "100%" }}
         />
       </Routes>
